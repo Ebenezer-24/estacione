@@ -16,10 +16,7 @@
     <form action="{{ route('usuarios.update', $usuario) }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="form-group">
-            <label for="dni">DNI</label>
-            <input type="text" name="dni" id="dni" class="form-control" value="{{ old('dni', $usuario->dni) }}">
-        </div>
+        
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control" value="{{ old('nombre', $usuario->nombre) }}">

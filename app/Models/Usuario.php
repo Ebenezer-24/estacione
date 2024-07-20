@@ -9,7 +9,11 @@ use Illuminate\Notifications\Notifiable;
 class Usuario extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+    
+    protected $primaryKey = 'dni';
+    public $incrementing = false;
+    
+    
     protected $fillable = [
         'dni',
         'nombre',
